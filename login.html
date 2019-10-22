@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Log in</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+    
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: url(black-hexagon-and-red-neon-light.jpg);
+        }
+        #log{
+            max-width: 30%;
+            background-color: rgba(255,255,255,0.5);
+        }
+        #sign{
+            max-width: 30%;
+            background-color: rgba(255,255,255,0.5);
+        }
+        .logsign{
+            margin-left: 12%;
+            margin-top: 5%;
+            box-shadow: 3px 3px 6px red;
+        }
+        .card-title{
+            color: red;
+        }
+        .logbtn{
+            float: right;
+        }
+    </style>
+    
+<body>
+    <div class="row" style="display: flex;">
+        <div class="col-lg-6 col-md-5 col-sm-12labelcard logsign" id="sign">
+            <div class="card-body">
+                <h2 class="card-title text-center" id="h2">Sign up</h2>
+                <hr>
+                <form action="signup.php" method="post">
+                    <label>Your Name:</label><br>
+                    <input type="text" name="name" class="form-control" required>
+                    
+                    <label>Your Age:</label><br>
+                    <input type="number" name="age" class="form-control" required>
+                    
+                    <label>Your Gender:</label><br>
+                    <input type="radio" value="Male" name="sex">Male<br>
+                    <input type="radio" value="Female" name="sex">Female
+                    <br>
+                    <label>Username:</label><br>
+                    <input type="text" name="user" class="form-control" required>
+                    
+                    <label>Password:</label><br>
+                    <input type="password" name="pass" class="form-control" required>
+                    <br>
+                    <input type="submit" value="Signup" name="signup" class="btn btn-success">
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-5 col-sm-12 card logsign" id="log">
+            <div class="card-body">
+                <h2 class="card-title text-center">Log in</h2>
+                <hr>
+                <form action="login.php" method="post">
+                    <label>Username:</label><br>
+                    <input type="text" name="user" class="form-control" required>
+                    <br>
+                    <label>Password:</label><br>
+                    <input type="password" name="pass" class="form-control" required>
+                    <br>
+                    <input type="submit" value="Login" name="login" class="btn btn-primary btn-lg logbtn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
